@@ -9,6 +9,14 @@ func factorial(n int) int {
 	return n * factorial(n-1) // Recursive case
 }
 
+func namesss(ss string) {
+	fmt.Println("Hello, ", ss)
+}
+
+func scores(score int) {
+	fmt.Println("Your score is:", score)
+}
+
 // Anonymos function to calculate factorial
 
 func main() {
@@ -33,4 +41,8 @@ func main() {
 	resultAnon := factorialFunc(number)
 	fmt.Printf("Factorial of %d using anonymous function is %d\n", number, resultAnon)
 	fmt.Println("Recursion is a powerful technique in Go!")
+	defer namesss("Alice")
+	scores(95)
+	fmt.Println("This is a simple example of recursion in Go.")
+
 }
