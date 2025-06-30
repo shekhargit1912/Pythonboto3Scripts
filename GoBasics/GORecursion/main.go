@@ -42,7 +42,7 @@ func main() {
 	fmt.Printf("Factorial of %d using anonymous function is %d\n", number, resultAnon)
 	fmt.Println("Recursion is a powerful technique in Go!")
 	defer namesss("Alice")
-	scores(95)
+	defer scores(95)
 	fmt.Println("This is a simple example of recursion in Go.")
 
 }
