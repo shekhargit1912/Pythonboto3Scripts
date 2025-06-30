@@ -28,4 +28,70 @@ func main() {
 	fmt.Println("Length after appending:", len(slice1))
 	fmt.Println("Capacity after appending:", cap(slice1))
 
+	//Xopy from the slice
+
+	src_slice := []int{1, 2, 3, 4, 5}
+	dst_slice := make([]int, 3)       // Create a destination slice with the same length
+	num := copy(dst_slice, src_slice) // Copy elements from src_slice to dst_slice
+	fmt.Println("Source slice:", src_slice)
+	fmt.Println("Destination slice after copy:", dst_slice)
+	fmt.Println("Number of elements copied:", num)
+
+	//Map in go
+
+	codes := map[string]int{
+		"Go":     1,
+		"Python": 2,
+		"Java":   3}
+
+	fmt.Println("Codes map:", codes)
+	fmt.Println(codes["Go"])
+	fmt.Println("Length of codes map:", len(codes))
+
+	// gettinmg keys
+	value, found := codes["Go"]
+	if found {
+		fmt.Println("Value for key 'Go':", found, value)
+	} else {
+		fmt.Println("Key 'Go' not found in map")
+	}
+	// getting value for a key
+	value, found = codes["Javas"]
+	if found {
+		fmt.Println("Value for key 'Javas':", found, value)
+	} else {
+		fmt.Println("Key 'Javas' not found in map")
+	}
+
+	//adding a new key-value pair
+	codes["JavaScript"] = 4
+	fmt.Println("Updated codes map after adding JavaScript:", codes)
+	// deleting a key-value pair
+	delete(codes, "Python")
+	fmt.Println("Codes map after deleting Python:", codes)
+
+	// iterating over a map
+	for key, value := range codes {
+		fmt.Printf("Key: %s, Value: %d\n", key, value)
+	}
+
+	//truue map example
+	// True map example
+	// codes2 := map[string]int{"Go": 1, "Python": 2, "Java": 3}
+	// fmt.Println("True map example:", codes2)
+	// fmt.Println("Value for key 'Go':", codes2["Go"])
+	// fmt.Println("Length of true map example:", len(codes2))
+	// fmt.Println("Keys in true map example:")
+	// for key := range codes2 {
+	// 	fmt.Println(key)
+
+	// }
+
+	//fmt.Println("True map example:")
+
+	// initiualize empty map
+	codes1 := make(map[string]int)
+	codes1["Go"] = 1
+	fmt.Println("Empty map after adding Go:", codes1)
+
 }
