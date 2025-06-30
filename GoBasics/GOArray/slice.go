@@ -38,6 +38,31 @@ func main() {
 	fmt.Println("Number of elements copied:", num)
 
 	//Map in go
+	demo := map[string]int{"A": 65, "B": 66, "C": 67}
+	delete(demo, "B") // Delete key "B" from the map
+	fmt.Println("Demo map after deletion:", demo)
+
+	/*
+		- create a map using make() function with key data type as string, and value data type as int.
+		- add the following key_value pairs to it
+		("A", 65)
+		("F", 70)
+		("K", 75)
+		- delete the key "F"
+		- print the map
+	*/
+
+	// Creating a map using make() function
+	// with key data type as string, and value data type as int.
+	// Adding key-value pairs
+	demoMap := make(map[string]int)
+	demoMap["A"] = 65
+	demoMap["F"] = 70
+	demoMap["K"] = 75
+	// Deleting the key "F"
+	delete(demoMap, "F")
+	// Printing the map
+	fmt.Println("Demo map after adding and deleting:", demoMap)
 
 	codes := map[string]int{
 		"Go":     1,
